@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Excel Task 1</title>
+</head>
+<body>
+    <div class="container pt-4 bg-info">
+        <div class="text-center p-1 text-white">
+            <h2>Excel Task 1</h1>
+        </div>
+        <div class="py-2">
+            <div class="container bg-white">
+
+                <div class="row">
+
+                    <div class="col-md-4 leftitem">
+
+                        <div class="accordion" id="accordionExample1">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+                                  Left Side
+                                </button>
+                              </h2>
+                              <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                    
+                                    <fieldset>
+                                        <legend>Saved Entry will display here:</legend>
+                                        <input class="form-control" type="text" id="username1" name="username1" placeholder="John Kabir"><br>
+                                        <input class="form-control" type="text" id="username2" name="username2" placeholder="Another Name"><br>
+                                    </fieldset>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+                    <div class="col-md-8 rightitem">
+                        <div class="accordion" id="accordionExample2">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne2">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                                  Right Side
+                                </button>
+                              </h2>
+                              <div id="collapseOne2" class="accordion-collapse collapse show" aria-labelledby="headingOne2" data-bs-parent="#accordionExample2">
+                                <div class="accordion-body">
+                                   
+                                    <fieldset class="pb-5">
+                                        <legend>Actions:</legend>
+                                        <button class="btn btn-primary">Edit</button>
+                                        <button class="btn btn-primary">Save</button>
+                                        <button class="btn btn-primary">Delete</button>
+                                        <button class="btn btn-primary">Cancel</button>
+                                    </fieldset>
+
+                                    <fieldset class="pb-5">
+                                        <legend>Basic Information:</legend>
+                                        <div class="py-2 d-flex align-items-center">
+                                            <label class="w-25" for="username">Name:</label>
+                                            <input class="form-control w-75" type="text" id="username" name="username" placeholder="Enter Name Text">    
+                                        </div>
+                                        <div class="py-2 d-flex align-items-center">
+                                            <label class="w-25" for="fathername">Father name:</label>
+                                            <input class="form-control w-75" type="text" id="fathername" name="fathername" placeholder="Enter Name Text">    
+                                        </div>
+                                        <div class="py-2 d-flex align-items-center">
+                                            <label class="w-25" for="mothername">Mother name:</label>
+                                            <input class="form-control w-75" type="text" id="mothername" name="mothername" placeholder="Enter Name Text">    
+                                        </div>
+                                        <div class="py-2 d-flex align-items-center">
+                                            <label class="w-25" for="maritalstatus">Marital Status:</label>
+                                            <div class="w-75">
+                                                <input type="radio" id="maritalstatus1" name="maritalstatus" value="1">
+                                                <label class="px-2" for="maritalstatus1">Single</label>
+                                                <input type="radio" id="maritalstatus2" name="maritalstatus" value="2">
+                                                <label class="px-2"for="maritalstatus2">Married</label>
+                                                <input type="radio" id="maritalstatus3" name="maritalstatus" value="3">
+                                                <label class="px-2"for="maritalstatus3">Others</label>        
+                                            </div>    
+                                        </div>
+                                        <div class="py-2 d-flex align-items-center">
+                                            <label class="w-25" for="country">Country:</label>
+                                              <div class="autocomplete w-75">
+                                                  <input class="form-control" id="countrylist" type="text" name="country" placeholder="Enter Text">
+                                              </div>                                                                                         
+                                        </div>
+                                        <div class="py-2 d-flex align-items-center">
+                                            <label class="w-25" for="userphoto">Photo:</label>
+                                            <input class="form-control w-75" type="file" id="userphoto" name="userphoto" accept="image/*" placeholder="Select Photo">    
+                                        </div>
+                                    </fieldset>
+
+
+                                    <fieldset class="pb-5">
+                                        <legend>Other Information:</legend>
+                                        <button class="btn btn-primary mb-3" id="addnewaddress">Add</button>
+                                        <table class="table-bordered w-100 text-center">
+                                            <thead>
+                                                <th>Address</th>
+                                                <th></th>
+                                            </thead>
+                                            <tbody id="mytbody">
+                                                <tr>
+                                                    <td>
+                                                        <input class="form-control" type="text" id="address" name="address" placeholder="Enter Address">
+                                                    </td>
+                                                    <td><button class="btn btn-success" onclick="editaddress(0)">Edit</button> <button class="btn btn-danger" onclick=deleteaddress(0)>Delete</button></td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </fieldset>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/autocomplete.js"></script>
+    <script src="js/javascript.js"></script>
+</body>
+</html>
